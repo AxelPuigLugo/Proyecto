@@ -1,12 +1,10 @@
-// Declaracion de los productos
-const productos = [
+// Definición de los productos
+var productos = [
     { nombre: 'Modelo especial', precio: 10 },
     { nombre: 'Negra modelo', precio: 15 },
     { nombre: 'Pacifico', precio: 20 },
     { nombre: 'Stela Artrois', precio: 25 }
   ];
-
-  //Declaracion de las variables usadas
   let carrito;
   let precioTotalCarrito;
   let seleccion;
@@ -17,12 +15,7 @@ const productos = [
   let cantidadCajas;
   let cantidadCajasEntero;
   let precioTotalProducto;
-
-  // Llamar a la función principal
-  agregarAlCarrito();
-
-  alert(`El valor total del carrito es $${precioTotalCarrito}`)
-
+  
   // Función principal
   function agregarAlCarrito() {
     carrito = []; // Array para almacenar los productos seleccionados
@@ -38,10 +31,12 @@ const productos = [
 Indeque que producto desea comprar usando el numero
 Si desea terminar el pedido ingrese 0`));
   
+
       // Verificar si el usuario desea finalizar la selección
       if (seleccion === 0) {
         break;
       }
+  
       // Verificar si la selección es válida
       if (seleccion >= 1 && seleccion <= productos.length) {
         // Obtener el producto seleccionado
@@ -111,6 +106,18 @@ Si desea terminar el pedido ingrese 0`));
         console.log('Selección inválida');
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
     // Mostrar el carrito de compras
     if (carrito.length > 0) {
       console.log('Carrito de compras:');
@@ -128,4 +135,7 @@ Si desea terminar el pedido ingrese 0`));
     }
   }
   
+  // Llamar a la función principal
+  agregarAlCarrito();
+
   
