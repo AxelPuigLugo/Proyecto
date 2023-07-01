@@ -1,20 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Infinity</title>
 </head>
 <body>
+  <header>  
+    <h1 class="titulo">
+      <img src="https://st2.depositphotos.com/3096625/6550/v/450/depositphotos_65503255-stock-illustration-3d-infinity-sign-of-the.jpg" width="500" height="200">
+      INFINITY
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <h1 id="titulo">Cerveceria Grupo KAAX</h1>
+  <div id="app">
+    <main>
+      <div class="spa-section" id="productos">
+        <h2 class="prod"></h2>
+        <div class="row row-cols-2 row-cols-md-3" id="product-list"></div>
+        <div id="categorias" class="mt-3"></div>
+      </div>
 
-      <script src="./app.js"></script>
+      <div class="spa-section" id="carrito">
+        <h2>Carrito</h2>
+        <div id="carrito-list"></div>
+        <p id="carrito-total">Total: $0</p>
+        <button class="btn btn-primary" onclick="actualizarCarrito()">Actualizar carrito</button>
+        <button class="btn btn-primary" onclick="mostrarFormularioPago()">Proceder al Pago</button>
+        <div id="formulario-pago" style="display: none;">
+          <h3>Formulario de Pago</h3>
+          <form onsubmit="vaciarCarrito(); return false;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+            <br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+            <br>
+            <button type="submit" class="btn btn-primary">Realizar Pago</button>
+          </form>
+        </div>
+      </div>
+         
 
-  
+      <div class="spa-section" id="contacto">
+        <h2>Contactanos</h2>
+        <ol>
+          <li>Dirección física:<br>
+            Insurgentes Sur 1602 Piso 9 Suite 900,<br>
+            Crédito Constructor Benito Juarez, 03940 Ciudad de México, CDMX, Mexico
+          </li>
+          <li>Número de teléfono:<br>
+            Teléfono principal: +52-557-3434802<br>
+            Teléfono de atención al cliente: +52-564-9367188
+          </li>
+          <li>
+            Correo electrónico:<br>
+            Correo electrónico principal: info@infinity.com<br>
+            Soporte técnico: support@infinity.com
+          </li>
+          <li>
+            Redes sociales:<br>
+            <ul>
+              <li>Facebook: facebook.com/infinity</li>
+              <li>Twitter: twitter.com/infinity</li>
+              <li>Instagram: instagram.com/infinity</li>
+              <li>LinkedIn: linkedin.com/company/infinity</li>
+            </ul>
+          </li>
+          <li>
+            Horario de atención:<br>
+            Lunes a viernes: 9:00 a.m. - 6:00 p.m.<br>
+            Sábado y domingo: Cerrado
+          </li>
+          <li>
+            Formulario de contacto:<br>
+            Puedes comunicarte con nosotros a través de nuestro formulario de contacto en nuestro sitio web: www.infinity.com/contacto
+          </li>
+          <li>
+            Chat en línea:<br>
+            Si necesitas asistencia inmediata, puedes utilizar nuestro chat en línea disponible en nuestro sitio web durante nuestro horario de atención.
+          </li>
+        </ol>
+        Esperamos poder ayudarte y brindarte una experiencia excepcional en INFINITY. ¡No dudes en comunicarte con nosotros para cualquier consulta o inquietud que tengas!
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>Todos los derechos reservados &copy; 2023 INFINITY</p>
+    <p>Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940 Ciudad de México, CDMX, Mexico</p>
+  </footer>
+
+  <script src="./app.js"></script>
 </body>
 </html>
-
-
- 
